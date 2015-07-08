@@ -1,0 +1,22 @@
+{
+  "name": "sanitizer",
+  "version": "0.1.0",
+  "homepage": "https://github.com/fxos-eng/sanitizer",
+  "authors": [
+    "FxOS Developers <dev-gaia@lists.mozilla.com>"
+  ],
+  "main": "sanitizer.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "example",
+    "node_modules",
+    "test",
+    "bower.json",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

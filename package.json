@@ -1,0 +1,21 @@
+{
+  "name": "sanitizer",
+  "version": "0.1.0",
+  "description": "A simple library to help you escape HTML using template strings",
+  "main": "sanitizer.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fxos-eng/sanitizer.git"
+  },
+  "author": "FxOS Developers <dev-gaia@lists.mozilla.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fxos-eng/sanitizer/issues"
+  },
+  "engines": {
+    "node": "0.11.14"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
