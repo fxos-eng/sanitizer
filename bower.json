@@ -1,6 +1,6 @@
 {
-  "name": "sanitizer",
-  "version": "0.1.0",
+  "name": "fxos-sanitizer",
+  "version": "0.1.1",
   "homepage": "https://github.com/fxos-eng/sanitizer",
   "authors": [
     "FxOS Developers <dev-gaia@lists.mozilla.com>"

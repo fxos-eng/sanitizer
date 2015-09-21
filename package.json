@@ -1,6 +1,6 @@
 {
-  "name": "sanitizer",
-  "version": "0.1.0",
+  "name": "fxos-sanitizer",
+  "version": "0.1.1",
   "description": "A simple library to help you escape HTML using template strings",
   "main": "sanitizer.js",
   "scripts": {},
