@@ -75,10 +75,10 @@
      * underwent security review.
      */
     unwrapSafeHTML: function (...htmlObjects) {
-      var markupList= htmlObjects.map(function(obj) {
-        return  obj.__html;
+      var markupList = htmlObjects.map(function(obj) {
+        return obj.__html;
       });
-      return markupList.join("");
+      return markupList.join('');
     }
   };
 
