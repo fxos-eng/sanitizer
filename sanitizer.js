@@ -43,14 +43,13 @@
     /**
      * Escapes HTML for all values in a tagged template string.
      */
-    escapeHTML: function (strings) {
+    escapeHTML: function (strings, ...values) {
       var result = '';
 
       for (var i = 0; i < strings.length; i++) {
         result += strings[i];
-        var value = arguments[i + 1] || '';
         if (i < values.length) {
-          result += String(value).replace(Sanitizer._entity,
+          result += String(values[i]).replace(Sanitizer._entity,
             Sanitizer.getEntity);
         }
       }
@@ -60,15 +59,8 @@
     /**
      * Escapes HTML and returns a wrapped object to be used during DOM insertion
      */
-    createSafeHTML: function (strings) {
-      var _len = arguments.length;
-      var values = new Array(_len > 1 ? _len - 1 : 0);
-      for (var _key = 1; _key < _len; _key++) {
-        values[_key - 1] = arguments[_key];
-      }
-
-      var escaped = Sanitizer.escapeHTML.apply(Sanitizer,
-        [strings].concat(values));
+    createSafeHTML: function (strings, ...values) {
+      var escaped = Sanitizer.escapeHTML(strings, ...values);
       return {
         __html: escaped,
         toString: function () {
@@ -82,13 +74,7 @@
      * Unwrap safe HTML created by createSafeHTML or a custom replacement that
      * underwent security review.
      */
-    unwrapSafeHTML: function () {
-      var _len = arguments.length;
-      var htmlObjects = new Array(_len);
-      for (var _key = 0; _key < _len; _key++) {
-        htmlObjects[_key] = arguments[_key];
-      }
-
+    unwrapSafeHTML: function (...htmlObjects) {
       var markupList = htmlObjects.map(function(obj) {
         return obj.__html;
       });
