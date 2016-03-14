@@ -3,7 +3,9 @@
   "version": "0.1.1",
   "description": "A simple library to help you escape HTML using template strings",
   "main": "sanitizer.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha --ui tdd"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/fxos-eng/sanitizer.git"
